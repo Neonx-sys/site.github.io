@@ -1,19 +1,19 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const tg = window.Telegram.WebApp;
+  document.addEventListener("DOMContentLoaded", () => {
+    const tg = window.Telegram.WebApp;
 
-  tg.expand();
+    tg.ready();  // Optional, but good to use
 
-  const user = tg.initDataUnsafe?.user;
+    const user = tg.initDataUnsafe.user;
 
-  if (user) {
-    const tg_id = user.id;
-    document.getElementById("tg_id").innerHTML = "Telegram ID:"+tg_id;
-    document.getElementById("tg_name").innerHTML = "Telegram ID:"+tg_id;
-    document.getElementById("clicks").innerHTML = "Telegram ID:"+tg_id;
-    /*console.log("Username:", user.username);
-    console.log("First name:", user.first_name);*/
-  } else {
-    document.getElementById("error").innerHTML = "No Telegram user data available";
-    //console.warn("No Telegram user data available");
-  }
-});
+    if (user) {
+      alert("User ID:"+ user.id);
+      alert("First Name:"+ user.first_name);
+      alert("Username:"+ user.username);
+
+      // Example: put user ID into a hidden input
+      const input = document.getElementById("telegram_id");
+      if (input) input.value = user.id;
+    } else {
+      alert("No Telegram user data available");
+    }
+  });
