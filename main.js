@@ -15,8 +15,6 @@
       if (input) input.value = user.id;
     } else {
       alert("No Telegram user data available");
-      alert("User ID:"+ user.id);
-      alert("First Name:"+ user.first_name);
-      alert("Username:"+ user.username);
+      alert(user.id);
     }
   });
