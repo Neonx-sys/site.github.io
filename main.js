@@ -7,5 +7,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   console.log("User ID: "+ userId+", Username: "+ username);
   alert("User ID: "+ userId+", Username: "+ username)
+  tg.WebApp.alert("User ID: "+ userId+", Username: "+ username)
 
 });
