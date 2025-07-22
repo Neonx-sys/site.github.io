@@ -6,5 +6,6 @@ window.addEventListener('DOMContentLoaded', () => {
   const username = tg.initDataUnsafe?.user?.username;
 
   console.log("User ID: "+ userId+", Username: "+ username);
+  alert("User ID: "+ userId+", Username: "+ username)
 
 });
