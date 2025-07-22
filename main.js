@@ -9,4 +9,10 @@ window.addEventListener('DOMContentLoaded', () => {
   alert("User ID: "+ userId+", Username: "+ username)
   tg.WebApp.alert("User ID: "+ userId+", Username: "+ username)
 
+  document.getElementById("tg_id").innerHTML=userId;
+  if(userId);
+  else{
+    document.getElementById("error").innerHTML="Error";
+  }
+
 });
